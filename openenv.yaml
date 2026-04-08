@@ -1,0 +1,21 @@
+
+name: human-ai-strategic-orchestrator
+version: 2.0.0
+description: Multi-step strategic routing under budget and risk constraints.
+
+observation_space:
+  type: dict
+  properties:
+    task_id: string
+    complexity: float [0, 1]
+    remaining_budget: float
+    current_risk_level: float
+
+action_space:
+  type: enum
+  options: ['ai_fast', 'ai_balanced', 'human_expert', 'defer']
+
+reward_function:
+  description: Success (+1) + Complexity Bonus - Failure Penalty - Cost Penalty
+
+entrypoint: server:app
