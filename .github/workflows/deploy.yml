@@ -20,14 +20,14 @@ jobs:
           git config --global user.email "you@example.com"
           git config --global user.name "github-actions"
 
-          git clone https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE repo
+          git clone https://huggingface.co/spaces/prinzep/human-ai-optimizer repo
           cd repo
 
           cp -r ../* .
           rm -rf .git
 
           git init
-          git remote add origin https://user:$HF_TOKEN@huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE
+          git remote add origin https://user:$HF_TOKEN@huggingface.co/spaces/prinzep/human-ai-optimizer
 
           git add .
           git commit -m "Auto deploy from GitHub"
