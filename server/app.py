@@ -36,7 +36,7 @@ def main():
         output_text = gr.Label(label="Decision")
         predict_btn.click(final_predict_ui, inputs=[name, comp, urg], outputs=output_text)
     
-    demo.launch()
+    demo.launch(server_name="0.0.0.0", server_port=7860)
 
 if __name__ == "__main__":
     main()

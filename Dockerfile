@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --no-cache-dir fastapi uvicorn pydantic
+# Install dependencies from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "server.py"]
+# Start the Gradio app (UI)
+CMD ["python", "server/app.py"]

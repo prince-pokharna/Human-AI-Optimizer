@@ -2,7 +2,7 @@
 [project]
 name = 'human-ai-strategic-orchestrator'
 version = '2.0.0'
-dependencies = ['fastapi', 'uvicorn', 'pydantic', 'numpy', 'openenv-core']
+dependencies = ['fastapi', 'uvicorn', 'pydantic', 'numpy', 'gradio', 'stable-baselines3', 'shimmy>=2.0', 'gymnasium', 'openenv-core']
 
 [project.scripts]
 server = 'server:main'
