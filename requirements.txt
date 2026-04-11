@@ -1,9 +1,4 @@
 fastapi
 uvicorn
 pydantic
-gradio
-numpy
-stable-baselines3
-shimmy>=2.0
-gymnasium
 openenv-core

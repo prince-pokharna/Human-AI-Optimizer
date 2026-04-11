@@ -5,13 +5,13 @@ from openai import OpenAI
 # ================= CONFIG =================
 API_BASE_URL = os.getenv("API_BASE_URL", "https://human-ai-optimizer.hf.space")
 MODEL_NAME = os.getenv("MODEL_NAME", "Qwen/Qwen2.5-72B-Instruct")
-HF_TOKEN = os.getenv("HF_TOKEN")
+API_KEY = os.getenv("HF_TOKEN")
 
 TASK_NAME = "human_vs_ai_decision"
 BENCHMARK = "custom_env"
 MAX_STEPS = 10
 
-client = OpenAI(base_url="https://router.huggingface.co/v1", api_key=HF_TOKEN)
+client = OpenAI(base_url="https://router.huggingface.co/v1", api_key=API_KEY)
 
 # ================= LOGGING =================
 def log_start():
